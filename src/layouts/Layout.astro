@@ -11,9 +11,10 @@ import Footer from '@/sections/global/Footer.astro';
 
 interface Props {
 	title: string;
+	booleanLayout: boolean;
 }
 
-const { title } = Astro.props;
+const { title, booleanLayout } = Astro.props;
 ---
 
 <!doctype html>
@@ -87,9 +88,9 @@ const { title } = Astro.props;
 		<SpeedInsights />
 	</head>
 
-	<body class="h-full w-full overflow-x-hidden">
-		<Header />
-		<main>
+	<body class="flex h-full flex-col items-center overflow-x-hidden">
+		<Header booleanHeader={booleanLayout} />
+		<main class="w-full md:max-w-[1260px]">
 			<slot />
 		</main>
 		<Footer />

@@ -1,0 +1,9 @@
+---
+interface Props {
+	booleanBanner: boolean;
+}
+
+const { booleanBanner } = Astro.props;
+---
+
+<img src="/header/banner.jpg" alt="" class:list={['max-w-fit', { hidden: booleanBanner }]} />

@@ -1,3 +1,14 @@
-<header class="flex h-20 w-full items-center justify-center bg-red-200">
+---
+import BannerHeader from './Header/BannerHeader.astro';
+
+interface Props {
+	booleanHeader: boolean;
+}
+
+const { booleanHeader } = Astro.props;
+---
+
+<BannerHeader booleanBanner={booleanHeader} />
+<header class="flex h-20 w-full items-center justify-center bg-red-200 md:max-w-[1260px]">
 	hi i'm a provisional header
 </header>
