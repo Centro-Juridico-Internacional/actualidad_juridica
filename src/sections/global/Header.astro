@@ -6,9 +6,40 @@ interface Props {
 }
 
 const { booleanHeader } = Astro.props;
+
+const dataHeaderSections = [
+	{ nombre: 'Laboral', url: '/laboral' },
+	{ nombre: 'Comercial', url: '/comercial' },
+	{ nombre: 'Familia', url: '/familia' },
+	{ nombre: 'Civil', url: '/civil' },
+	{ nombre: 'Empresarial', url: '/empresarial' },
+	{ nombre: 'Videos', url: '/videos' }
+];
 ---
 
 <BannerHeader booleanBanner={booleanHeader} />
-<header class="flex h-20 w-full items-center justify-center bg-red-200 md:max-w-[1260px]">
-	hi i'm a provisional header
+<header
+	class="flex h-20 w-full flex-col items-center justify-center md:max-w-[1260px]"
+	transition:name="header"
+>
+	<ul class="flex size-full">
+		<li class="h-12 w-[20%] bg-red-300"></li>
+		<li class="h-12 w-[10%] bg-red-400"></li>
+		<li class="h-12 w-[40%] bg-red-500"><a href="/">Inicio</a></li>
+		<li class="h-12 w-[30%] bg-red-600"></li>
+	</ul>
+	<ul class="flex size-full">
+		{
+			dataHeaderSections.map((i) => (
+				<li class="h-12 w-1/6 border-2 border-green-800 bg-green-200">
+					<a
+						href={i.url}
+						class="flex size-full items-center justify-center text-center transition-all duration-150 ease-out hover:-translate-y-1 hover:scale-110"
+					>
+						{i.nombre}
+					</a>
+				</li>
+			))
+		}
+	</ul>
 </header>
