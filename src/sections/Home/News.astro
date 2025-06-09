@@ -1,0 +1,119 @@
+---
+const DATA = [
+	{
+		bgImg:
+			'https://accolombianlawyers.com/noticias/wp-content/uploads/2025/06/Mesa-de-trabajo-1-copia-2-1-860x483.png',
+		category: 'Jurídica',
+		title: 'Título 1',
+		description:
+			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ut est iure reprehenderit distinctio amet voluptas facilis cupiditate doloribus ab delectus, beatae illum ratione quidem dolorem deserunt nulla praesentium magni!',
+		imgPerson:
+			'https://secure.gravatar.com/avatar/fcc5219188d3f8a3c76345486217720c521e7b7a47d950ba2de7a6204f8b8bc2?s=44&d=mm&r=g',
+		namePerson: 'Juan David Cutiva Lopez',
+		date: '06 Junio 2025'
+	},
+	{
+		bgImg:
+			'https://accolombianlawyers.com/noticias/wp-content/uploads/2025/06/Mesa-de-trabajo-1-copia-2-1-860x483.png',
+		category: 'Empresarial',
+		title: 'Título 2',
+		description:
+			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ut est iure reprehenderit distinctio amet voluptas facilis cupiditate doloribus ab delectus, beatae illum ratione quidem dolorem deserunt nulla praesentium magni!',
+		imgPerson:
+			'https://secure.gravatar.com/avatar/fcc5219188d3f8a3c76345486217720c521e7b7a47d950ba2de7a6204f8b8bc2?s=44&d=mm&r=g',
+		namePerson: 'Miguel Angel Hernandez Vanegas',
+		date: '08 Junio 2025'
+	},
+	{
+		bgImg:
+			'https://accolombianlawyers.com/noticias/wp-content/uploads/2025/06/Mesa-de-trabajo-1-copia-2-1-860x483.png',
+		category: 'Civil',
+		title: 'Título 3',
+		description:
+			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ut est iure reprehenderit distinctio amet voluptas facilis cupiditate doloribus ab delectus, beatae illum ratione quidem dolorem deserunt nulla praesentium magni!',
+		imgPerson:
+			'https://secure.gravatar.com/avatar/fcc5219188d3f8a3c76345486217720c521e7b7a47d950ba2de7a6204f8b8bc2?s=44&d=mm&r=g',
+		namePerson: 'Diego Armando Cutiva Ortiz',
+		date: '08 Mayo 2025'
+	}
+];
+---
+
+<section
+	id="newsSectionContainer"
+	class="mt-8 flex h-fit w-full flex-col items-center justify-center gap-3 text-gray-50 md:flex-row md:px-2 xl:px-0"
+>
+	<div
+		id="mainNews"
+		class="flex h-[18rem] w-[95%] items-end bg-cover bg-center bg-no-repeat md:h-[26rem] md:w-[60%]"
+		style={`background-image: url(${DATA[0].bgImg})`}
+	>
+		<div class="flex size-full flex-col justify-end bg-gradient-to-t from-black to-black/40">
+			<div class="flex h-1/2 w-full flex-col justify-between p-6 pt-3">
+				<h3 id="categoryMainNews">{DATA[0].category}</h3>
+				<h1 id="titleMainNews" class="font-bold">{DATA[0].title}</h1>
+				<h4 id="descriptionMainNews" class="text-sm">{DATA[0].description}</h4>
+				<div id="infoMainNews" class="flex w-full items-center justify-start gap-x-3 text-sm">
+					<img
+						src={DATA[0].imgPerson}
+						alt=`${DATA[0].namePerson} Foto`
+						id="picturePersonMainNews"
+						class="max-h-6 rounded-full"
+					/>
+					<strong id="NamePersonMainNews">{DATA[0].namePerson}</strong>
+					<h4 id="DateMainNews">{DATA[0].date}</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="secondaryNews" class="flex h-[26rem] w-[95%] flex-col gap-y-3 md:h-[26rem] md:w-[40%]">
+		<div
+			class="bg-end flex h-1/2 w-full items-end bg-cover bg-no-repeat"
+			style={`background-image: url(${DATA[1].bgImg})`}
+		>
+			<div class="flex size-full flex-col justify-end bg-gradient-to-t from-black to-black/40">
+				<div class="flex h-1/2 w-full flex-col justify-between p-6 pt-3">
+					<h3 id="categorySecondaryNewsOne">{DATA[1].category}</h3>
+					<h1 id="titleSecondaryNewsOne" class="font-bold">{DATA[1].title}</h1>
+					<div
+						id="infoSecondaryNewsOne"
+						class="flex w-full items-center justify-start gap-x-3 text-sm"
+					>
+						<img
+							src={DATA[1].imgPerson}
+							alt=`${DATA[1].namePerson} Foto`
+							id="picturePersonSecondaryNewsOne"
+							class="max-h-6 rounded-full"
+						/>
+						<strong id="NamePersonSecondaryNewsOne">{DATA[1].namePerson}</strong>
+						<h4 id="DateMainNews">{DATA[1].date}</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="bg-end flex h-1/2 w-full items-end bg-cover bg-no-repeat"
+			style={`background-image: url(${DATA[2].bgImg})`}
+		>
+			<div class="flex size-full flex-col justify-end bg-gradient-to-t from-black to-black/40">
+				<div class="flex h-1/2 w-full flex-col justify-between p-6 pt-3">
+					<h3 id="categorySecondaryNewsTwo">{DATA[2].category}</h3>
+					<h1 id="titleSecondaryNewsTwo" class="font-bold">{DATA[2].title}</h1>
+					<div
+						id="infoSecondaryNewsTwo"
+						class="flex w-full items-center justify-start gap-x-3 text-sm"
+					>
+						<img
+							src={DATA[2].imgPerson}
+							alt=`${DATA[2].namePerson} Foto`
+							id="picturePersonSecondaryNewsTwo"
+							class="max-h-6 rounded-full"
+						/>
+						<strong id="NamePersonSecondaryNewsTwo">{DATA[2].namePerson}</strong>
+						<h4 id="DateMainNews">{DATA[2].date}</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
