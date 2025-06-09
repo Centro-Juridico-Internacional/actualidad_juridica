@@ -1,4 +1,5 @@
 ---
+// IMPORT STYLES
 import '@/styles/global.css';
 import '@fontsource-variable/noto-sans-jp';
 // ASTRO VIEW TRANSITIONS
@@ -6,14 +7,15 @@ import { ClientRouter } from 'astro:transitions';
 // VERCEL
 import Analytics from '@vercel/analytics/astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
+// SECTIONS
 import Header from '@/sections/global/Header.astro';
 import Footer from '@/sections/global/Footer.astro';
 
+// Props Astro
 interface Props {
 	title: string;
 	booleanLayout: boolean;
 }
-
 const { title, booleanLayout } = Astro.props;
 ---
 
@@ -84,7 +86,9 @@ const { title, booleanLayout } = Astro.props;
 
 		<!-- Astro ViewTransitions -->
 		<ClientRouter />
+		<!-- Vercel Analytics -->
 		<Analytics />
+		<!-- Vercel SpeedInsights -->
 		<SpeedInsights />
 	</head>
 
