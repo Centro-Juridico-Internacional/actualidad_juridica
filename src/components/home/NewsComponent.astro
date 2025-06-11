@@ -7,17 +7,31 @@ interface Props {
 	imgPerson: string;
 	namePerson: string;
 	date: string;
+	bgColor: boolean;
+	textStyle: boolean;
 }
 
-const { name, category, title, description, imgPerson, namePerson, date } = Astro.props;
+const { name, category, title, description, imgPerson, namePerson, date, bgColor, textStyle } =
+	Astro.props;
 ---
 
-<div class="flex size-full flex-col justify-end bg-gradient-to-t from-black to-black/40">
-	<div class="flex h-1/2 w-full flex-col justify-between p-6 pt-3">
+<div
+	class:list={[
+		'flex size-full flex-col px-8 pb-5',
+		{ 'bg-gradient-to-t from-black to-black/40': bgColor },
+		{ 'justify-end': textStyle, 'justify-center': !textStyle }
+	]}
+>
+	<div
+		class:list={[
+			'flex w-full flex-col justify-between',
+			{ 'h-1/2': textStyle, 'h-full pt-5': !textStyle }
+		]}
+	>
 		<h3 id=`category${name}`>{category}</h3>
 		<h1 id=`title${name}` class="font-bold">{title}</h1>
 		<h4 id=`description${name}` class="text-sm">{description}</h4>
-		<div id=`info${name}` class="flex w-full items-center justify-start gap-x-3 text-sm">
+		<div id=`info${name}` class="flex w-full items-center justify-start gap-x-2 text-xs">
 			<img
 				src={imgPerson}
 				alt=`${namePerson} Foto`

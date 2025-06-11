@@ -6,7 +6,7 @@ const DATA = [
 		bgImg:
 			'https://accolombianlawyers.com/noticias/wp-content/uploads/2025/06/Mesa-de-trabajo-1-copia-2-1-860x483.png',
 		category: 'Jurídica',
-		title: 'Título 1',
+		title: '¿Qué pasa con la prima si cambia de trabajo antes de recibirla?',
 		description:
 			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ut est iure reprehenderit distinctio amet voluptas facilis cupiditate doloribus ab delectus, beatae illum ratione quidem dolorem deserunt nulla praesentium magni!',
 		imgPerson:
@@ -18,7 +18,7 @@ const DATA = [
 		bgImg:
 			'https://accolombianlawyers.com/noticias/wp-content/uploads/2025/06/Mesa-de-trabajo-1-copia-2-1-860x483.png',
 		category: 'Empresarial',
-		title: 'Título 2',
+		title: 'Consulta hundida y reforma laboral revivida: ¿Qué viene ahora?',
 		description:
 			'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ut est iure reprehenderit distinctio amet voluptas facilis cupiditate doloribus ab delectus, beatae illum ratione quidem dolorem deserunt nulla praesentium magni!',
 		imgPerson:
@@ -42,56 +42,37 @@ const DATA = [
 ---
 
 <section
-	id="newsSectionContainer"
-	class="mt-8 flex h-fit w-full flex-col items-center justify-center gap-3 text-gray-50 md:flex-row md:px-2 xl:px-0"
+	id="InformationOfInterestSection"
+	class="mt-8 inline-flex h-40 w-full bg-gray-500 shadow-2xl"
 >
-	<div
-		id="mainNews"
-		class="flex h-[18rem] w-[95%] items-end bg-cover bg-center bg-no-repeat md:h-[26rem] md:w-[60%]"
-		style={`background-image: url(${DATA[0].bgImg})`}
-	>
+	<div class="flex h-full w-1/2 items-center">
 		<NewsComponent
-			bgColor={true}
+			bgColor={false}
 			name="MainNews"
 			category={DATA[0].category}
 			title={DATA[0].title}
-			description={DATA[0].description}
 			imgPerson={DATA[0].imgPerson}
 			namePerson={DATA[0].namePerson}
 			date={DATA[0].date}
-			textStyle={true}
+			textStyle={false}
 		/>
-	</div>
-	<div id="secondaryNews" class="flex h-[26rem] w-[95%] flex-col gap-y-3 md:w-[40%]">
-		<div
-			class="bg-end flex h-1/2 w-full items-end bg-cover bg-no-repeat"
-			style={`background-image: url(${DATA[1].bgImg})`}
-		>
-			<NewsComponent
-				bgColor={true}
-				name="SecondaryNewsOne"
-				category={DATA[1].category}
-				title={DATA[1].title}
-				imgPerson={DATA[1].imgPerson}
-				namePerson={DATA[1].namePerson}
-				date={DATA[1].date}
-				textStyle={true}
-			/>
+		<div class="w-2/3">
+			<img src={DATA[0].bgImg} alt="" class="h-1/2 w-full object-cover pr-8" />
 		</div>
-		<div
-			class="bg-end flex h-1/2 w-full items-end bg-cover bg-no-repeat"
-			style={`background-image: url(${DATA[2].bgImg})`}
-		>
-			<NewsComponent
-				bgColor={true}
-				name="SecondaryNewsTwo"
-				category={DATA[2].category}
-				title={DATA[2].title}
-				imgPerson={DATA[2].imgPerson}
-				namePerson={DATA[2].namePerson}
-				date={DATA[2].date}
-				textStyle={true}
-			/>
+	</div>
+	<div class="flex h-full w-1/2 items-center">
+		<NewsComponent
+			bgColor={false}
+			name="MainNews"
+			category={DATA[1].category}
+			title={DATA[1].title}
+			imgPerson={DATA[1].imgPerson}
+			namePerson={DATA[1].namePerson}
+			date={DATA[1].date}
+			textStyle={false}
+		/>
+		<div class="w-2/3">
+			<img src={DATA[1].bgImg} alt="" class="h-1/2 w-full object-cover pr-8" />
 		</div>
 	</div>
 </section>
