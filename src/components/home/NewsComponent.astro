@@ -1,0 +1,31 @@
+---
+interface Props {
+	name: string;
+	category: string;
+	title: string;
+	description?: string;
+	imgPerson: string;
+	namePerson: string;
+	date: string;
+}
+
+const { name, category, title, description, imgPerson, namePerson, date } = Astro.props;
+---
+
+<div class="flex size-full flex-col justify-end bg-gradient-to-t from-black to-black/40">
+	<div class="flex h-1/2 w-full flex-col justify-between p-6 pt-3">
+		<h3 id=`category${name}`>{category}</h3>
+		<h1 id=`title${name}` class="font-bold">{title}</h1>
+		<h4 id=`description${name}` class="text-sm">{description}</h4>
+		<div id=`info${name}` class="flex w-full items-center justify-start gap-x-3 text-sm">
+			<img
+				src={imgPerson}
+				alt=`${namePerson} Foto`
+				id=`picturePerson${name}`
+				class="max-h-6 rounded-full"
+			/>
+			<strong id=`NamePerson${name}`>{namePerson}</strong>
+			<h4 id=`Date${name}`>{date}</h4>
+		</div>
+	</div>
+</div>
