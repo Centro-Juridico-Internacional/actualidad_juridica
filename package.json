@@ -9,16 +9,22 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/vercel": "^8.1.4",
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/vercel": "^8.0.4",
     "@fontsource-variable/noto-sans-jp": "^5.2.5",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.7",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
+    "antd": "^5.26.0",
     "astro": "^5.8.0",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.7"
   }
 }
