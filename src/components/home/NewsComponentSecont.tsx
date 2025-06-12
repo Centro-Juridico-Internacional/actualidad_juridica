@@ -32,7 +32,7 @@ const NewsComponent: React.FC<NewsComponentProps> = ({
 					{description}
 				</h4>
 
-				<div id={`info${name}`} className="flex w-full justify-start gap-x-2 text-xs">
+				<div id={`info${name}`} className="flex w-full items-center justify-start gap-x-2 text-xs">
 					<img
 						src={imgPerson}
 						alt={`${namePerson} Foto`}
