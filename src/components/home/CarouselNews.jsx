@@ -11,7 +11,6 @@ const Style = {
 
 const App = () => {
 	const lastItems = DATA.slice(-3).reverse(); // Últimos 3 elementos, en orden descendente
-	console.log(lastItems);
 
 	return (
 		<Carousel autoplay={{ dotDuration: true }} autoplaySpeed={5000} style={Style} infinite={true}>
