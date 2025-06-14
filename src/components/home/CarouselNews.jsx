@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel } from 'antd';
-import LayoutNews from './LayoutNews';
+import LayoutNews from '@/components/home/LayoutNews';
 import DATA from '@/data/dataTest.json';
 
 const Style = {
