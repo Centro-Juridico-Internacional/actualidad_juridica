@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel } from 'antd';
-import NewsComponent from './NewsComponentSecont';
+import LayoutNews from './LayoutNews';
 import DATA from '@/data/dataTest.json';
 
 const Style = {
@@ -27,7 +27,7 @@ const App = () => {
 							style={contentStyle}
 							className="bg-start h-[18rem] bg-cover bg-no-repeat md:h-[26rem]"
 						>
-							<NewsComponent
+							<LayoutNews
 								name={`SecondaryNewsTwo-${item.id}`}
 								category={item.category}
 								title={item.title}
